@@ -9,7 +9,7 @@ spec:
     command: ["/bin/sh", "-c", "echo File has been copied > /tmp/xchange/testfile; sleep 30"]
     volumeMounts:
       -name: xchange
-        mountPath: "/tmp/xchange"
+       mountPath: "/tmp/xchange"
   containers:
   - name: c2
     image: centos
