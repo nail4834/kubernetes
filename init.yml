@@ -13,7 +13,7 @@ spec:
   containers:
   - name: c2
     image: centos
-    command: ["/bin/bash", "-c", while trun; do echo 'cat /tmp/data/testfile'; sleep 5; done"]
+    command: ["/bin/bash", "-c", while true; do echo 'cat /tmp/data/testfile'; sleep 5; done"]
     volumeMounts:
     - name: xchange
       mountPath: "/tmp/data"
