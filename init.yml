@@ -1,1 +1,23 @@
-
+apiversion: v1
+kind: pod
+metadata:
+  name: initcontainer
+spec:
+  initcontainer:
+  - name: c1
+    image: centos
+    command: ["/bin/sh", "-c", "echo File has been copied" > /tmp/xchange/testfile; sleep 30"]
+    volumeMounts:
+      -name: xchange
+        mountPath: "/tmp/xchange"
+  containers:
+  - name: c2
+    image: centos
+    command: ["/bin/bash", "-c", while trun; do echo 'cat /tmp/data/testfile'; sleep 5; done"]
+    volumeMounts:
+    - name: xchange
+      mountPath: "/tmp/data"
+  volumes:
+  - name: xchange
+    emptyDir: {}
+      
