@@ -3,7 +3,7 @@ kind: pod
 metadata:
   name: initcontainer
 spec:
-  initcontainer:
+  initContainer:
   - name: c1
     image: centos
     command: ["/bin/sh", "-c", "echo File has been copied" > /tmp/xchange/testfile; sleep 30"]
