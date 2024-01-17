@@ -6,7 +6,7 @@ spec:
   initContainer:
   - name: c1
     image: centos
-    command: ["/bin/sh", "-c", "echo File has been copied" > /tmp/xchange/testfile; sleep 30"]
+    command: ["/bin/sh", "-c", "echo File has been copied > /tmp/xchange/testfile; sleep 30"]
     volumeMounts:
       -name: xchange
         mountPath: "/tmp/xchange"
